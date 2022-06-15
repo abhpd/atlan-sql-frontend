@@ -1,0 +1,7 @@
+.background {
+  background-color: whitesmoke;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
