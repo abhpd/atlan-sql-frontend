@@ -11,11 +11,11 @@ function ControlBar({ state, setState }) {
   };
 
   const removeQuery = () => {
-    if (state.selected > 0) {
+    if (state.query.length > 1) {
       state.query.splice(state.selected, 1);
       state.console.splice(state.selected, 1);
       state.result.splice(state.selected, 1);
-      state.selected -= 1;
+      state.selected = 0;
       setState({ ...state });
     }
   };
@@ -26,9 +26,17 @@ function ControlBar({ state, setState }) {
     >
       <FileButton state={state} setState={setState} />
       <div className={`${styles.flex_row} ${styles.flex_right}`}>
-        <div className={`${styles.static_button} ${styles.run_button}`}>
-          Run
-        </div>
+        <form action="">
+          <button
+            className={`fill-div ${styles.submit_button} ${styles.whitetext}`}
+            type="submit"
+          >
+            <div className={`${styles.static_button} ${styles.run_button}`}>
+              Run
+            </div>
+          </button>
+        </form>
+
         <div
           className={`${styles.static_button} ${styles.delete_button}`}
           onClick={removeQuery}
