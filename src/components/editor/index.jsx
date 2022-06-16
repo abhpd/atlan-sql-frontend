@@ -15,7 +15,7 @@ function Editor({ state, setState }) {
         theme="dark"
         extensions={[sql()]}
         onChange={(value, viewUpdate) => {
-          console.log("value:", value);
+          // console.log("value:", value);
           state.query[state.selected] = value;
           setState({ ...state });
         }}

@@ -2,7 +2,6 @@ import styles from "./Control_bar.module.css";
 
 function FileButton({ state, setState }) {
   const onClick = (event) => {
-    console.log(event.target.innerHTML);
     state.selected = Number(event.target.innerHTML) - 1;
     setState({ ...state });
   };
@@ -22,7 +21,11 @@ function FileButton({ state, setState }) {
   });
 
   return (
-    <div className={`${styles.flex_row} ${styles.file_buttons}`}>{buttons}</div>
+    <div
+      className={`${styles.flex_row} ${styles.file_buttons} ${styles.width_full}`}
+    >
+      {buttons}
+    </div>
   );
 }
 
