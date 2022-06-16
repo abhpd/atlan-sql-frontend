@@ -3,21 +3,25 @@ import { sql } from "@codemirror/lang-sql";
 
 import styles from "./Editor.module.css";
 import Console from "../console";
+import ControlBar from "../controlBar";
 
-function Editor() {
+function Editor({ state, setState }) {
   return (
     <div className={`fill-div ${styles.flex}`}>
+      <ControlBar state={state} setState={setState} />
       <CodeMirror
-        value="select * from Employees;"
+        value={state.query[state.selected]}
         height="100%"
         theme="dark"
         extensions={[sql()]}
         onChange={(value, viewUpdate) => {
           console.log("value:", value);
+          state.query[state.selected] = value;
+          setState({ ...state });
         }}
-        className={`fill-div ${styles.CodeMirror} ${styles.p66}`}
+        className={`fill-div ${styles.CodeMirror} ${styles.p70}`}
       />
-      <Console />
+      <Console state={state} />
     </div>
   );
 }

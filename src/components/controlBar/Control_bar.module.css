@@ -1,0 +1,72 @@
+.background {
+  background-color: rgb(50, 50, 50);
+}
+.whitetext {
+  color: white;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.padding {
+  padding: 15px 5px 5px 15px;
+}
+.size {
+  flex: 0 0 4vh;
+  max-height: 4vh;
+  min-height: 4vh;
+  overflow-y: hidden;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.flex_right {
+  flex-direction: row-reverse;
+}
+
+.flex_space_between {
+  justify-content: space-between;
+}
+
+.file_button {
+  user-select: none;
+  width: 80px;
+  height: 100%;
+  background-color: rgb(39, 39, 39);
+  border: 1px solid rgb(70, 70, 70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file_button:hover {
+  background-color: rgb(68, 68, 68);
+  cursor: pointer;
+}
+
+.file_button :active {
+  background-color: black;
+}
+
+.run_button {
+  background-color: rgb(0, 154, 23);
+  border: 0px;
+}
+.run_button:hover {
+  background-color: rgb(0, 126, 19);
+}
+
+.delete_button {
+  background-color: rgb(204, 37, 0);
+  border: 0px;
+}
+.delete_button:hover {
+  background-color: rgb(119, 0, 0);
+}
+
+.highlight {
+  background-color: blueviolet;
+}

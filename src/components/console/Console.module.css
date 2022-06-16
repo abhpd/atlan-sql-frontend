@@ -1,6 +1,17 @@
 .background {
   background-color: black;
 }
-.p33 {
-  flex: 1 1 33.33%;
+.whitetext {
+  color: white;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.padding {
+  padding: 15px 5px 5px 15px;
+}
+.p30 {
+  flex: 0 0 30vh;
+  height: 30vh;
+  overflow: scroll;
 }

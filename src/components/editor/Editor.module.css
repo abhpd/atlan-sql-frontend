@@ -1,11 +1,15 @@
 .flex {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  overflow: scroll;
 }
 .CodeMirror {
   font-family: Arial, monospace;
   font-size: 16px;
 }
-.p66 {
-  flex: 1 1 66%;
+.p70 {
+  flex: 0 0 66vh;
+  height: 66vh;
+  overflow: scroll;
 }
