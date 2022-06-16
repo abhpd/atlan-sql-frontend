@@ -8,10 +8,13 @@ function ControlBar({ state, setState }) {
     >
       <FileButton state={state} setState={setState} />
       <div className={`fill-div ${styles.flex_row} ${styles.flex_right}`}>
-        <div className={`${styles.file_button} ${styles.run_button}`}>Run</div>
-        <div className={`${styles.file_button} ${styles.delete_button}`}>
+        <div className={`${styles.static_button} ${styles.run_button}`}>
+          Run
+        </div>
+        <div className={`${styles.static_button} ${styles.delete_button}`}>
           Delete
         </div>
+        <div className={`${styles.file_button}`}>+</div>
       </div>
     </div>
   );

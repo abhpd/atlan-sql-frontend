@@ -22,10 +22,7 @@ function FileButton({ state, setState }) {
   });
 
   return (
-    <div className={`${styles.flex_row}`}>
-      {buttons}
-      <div className={`${styles.file_button}`}>+</div>
-    </div>
+    <div className={`${styles.flex_row} ${styles.file_buttons}`}>{buttons}</div>
   );
 }
 

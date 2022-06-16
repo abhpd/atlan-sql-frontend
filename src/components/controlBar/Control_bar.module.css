@@ -10,17 +10,10 @@
 .padding {
   padding: 15px 5px 5px 15px;
 }
-.size {
-  flex: 0 0 4vh;
-  max-height: 4vh;
-  min-height: 4vh;
-  overflow-y: hidden;
-}
 
 .flex_row {
   display: flex;
   flex-direction: row;
-  height: 100%;
 }
 
 .flex_right {
@@ -30,8 +23,28 @@
 .flex_space_between {
   justify-content: space-between;
 }
-
+.file_buttons {
+  overflow: scroll;
+}
 .file_button {
+  user-select: none;
+  padding: 0px 45px;
+  height: 100%;
+  background-color: rgb(39, 39, 39);
+  border: 1px solid rgb(70, 70, 70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file_buttons::-webkit-scrollbar {
+  display: none;
+}
+.file_button:hover {
+  background-color: rgb(78, 24, 129);
+  cursor: pointer;
+}
+
+.static_button {
   user-select: none;
   width: 80px;
   height: 100%;
@@ -40,10 +53,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.file_button:hover {
-  background-color: rgb(78, 24, 129);
   cursor: pointer;
 }
 
@@ -65,4 +74,8 @@
 
 .highlight {
   background-color: blueviolet;
+}
+
+.overflow_scroll {
+  overflow: scroll;
 }
