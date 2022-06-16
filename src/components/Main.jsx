@@ -20,16 +20,19 @@ function Main() {
       ) : (
         <Result state={state} setState={setState} />
       )}
+      <button
+        className={`${styles.switch_button}`}
+        onClick={() => {
+          setleft(!left);
+        }}
+      >
+        🔁
+      </button>
       {left === false ? (
         <Editor state={state} setState={setState} />
       ) : (
         <Result state={state} setState={setState} />
       )}
-      <button
-        onClick={() => {
-          setleft(!left);
-        }}
-      ></button>
     </div>
   );
 }

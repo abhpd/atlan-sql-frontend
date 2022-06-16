@@ -43,12 +43,8 @@
 }
 
 .file_button:hover {
-  background-color: rgb(68, 68, 68);
+  background-color: rgb(78, 24, 129);
   cursor: pointer;
-}
-
-.file_button :active {
-  background-color: black;
 }
 
 .run_button {
