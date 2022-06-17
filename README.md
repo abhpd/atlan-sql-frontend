@@ -1,5 +1,7 @@
 # Atlan SQL Frontend Task 💼
 
+> Deployed: [https://atlan-sql.herokuapp.com/](https://atlan-sql.herokuapp.com/)
+
 A web-based React application frontend capable of submitting SQL queries and displaying the results of said query. The application includes a space which accepts SQL queries in the form of user inputs, then displays the result within the application.
 
 This application also have tabs for multiple query pages so that user can work on multiple queries at the same time.
