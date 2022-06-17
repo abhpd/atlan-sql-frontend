@@ -21,5 +21,5 @@ This application also have tabs for multiple query pages so that user can work o
 
 ## Imporovements on load time
 
-- By selective rendering rows of the result table, load time reduced by over 8 seconds.
+- By selective rendering rows of the result table, load time reduced by over 8 seconds. This also enables us to load large amount of rows without breaking the browser.
 - In a full stack application we can achieve even more better load time by using paging for the result query.
