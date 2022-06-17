@@ -40,17 +40,23 @@ function Result({ state }) {
   return (
     <div className={`fill-div ${styles.background} ${styles.p100}`}>
       <div className={`${styles.padding}`}>
-        <table>
-          <thead>{headerRow}</thead>
-          <tbody>{dataRows}</tbody>
-        </table>
+        {state.selected > 2 ? (
+          state.result[state.selected]
+        ) : (
+          <table>
+            <thead>{headerRow}</thead>
+            <tbody>{dataRows}</tbody>
+          </table>
+        )}
         <center>
+          <b>{`(${Math.max(0, data.length - rows)} more rows)`}</b>
+          <br />
           {data.length > rows ? (
             <a className={`${styles.link}`} onClick={() => setRows(rows + 50)}>
-              Show 50 more results ...
+              Show 50 more results
             </a>
           ) : (
-            "...END..."
+            <a className={`${styles.link}`}>...END...</a>
           )}
         </center>
       </div>

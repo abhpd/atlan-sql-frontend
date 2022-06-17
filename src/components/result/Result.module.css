@@ -16,6 +16,7 @@
   color: blue;
   position: relative;
   cursor: pointer;
+  user-select: none;
 }
 .link:hover {
   text-decoration: underline;

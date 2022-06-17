@@ -11,12 +11,12 @@ function Main() {
     query: [
       "select * from customers;",
       "select * from orders;",
-      "select * from products.",
+      "select * from products;",
     ],
     console: [
       "Query Executed Successfully.",
-      "Query Executed Successfully",
-      "Query Executed Successfully",
+      "Query Executed Successfully.",
+      "Query Executed Successfully.",
     ],
     result: ["customers", "orders", "products"],
   });
