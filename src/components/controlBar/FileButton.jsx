@@ -7,9 +7,10 @@ function FileButton({ state, setState }) {
   };
 
   var i = 1;
-  var buttons = state.query.map((ele) => {
+  var buttons = state.query.map((ele, indx) => {
     return (
       <div
+        key={indx}
         className={`${styles.file_button} ${
           Number(i) == Number(state.selected) + 1 ? styles.highlight : ""
         }`}
