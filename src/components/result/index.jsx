@@ -40,8 +40,8 @@ function Result({ state }) {
   return (
     <div className={`fill-div ${styles.background} ${styles.p100}`}>
       <div className={`${styles.padding}`}>
-        {state.selected > 2 ? (
-          state.result[state.selected]
+        {state.result[state.selected] == "" ? (
+          "Your Query Result will be displayed here."
         ) : (
           <table>
             <thead>{headerRow}</thead>

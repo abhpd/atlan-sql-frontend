@@ -5,8 +5,8 @@ function ControlBar({ state, setState }) {
   const addNewQuery = () => {
     state.query.push("-- Write your Query Here.");
     state.console.push("Errors related to your query will be displayed here.");
-    state.result.push("Your Query Result will be displayed here.");
-
+    state.result.push("");
+    state.selected = state.query.length - 1;
     setState({ ...state });
   };
 
@@ -15,9 +15,13 @@ function ControlBar({ state, setState }) {
       state.query.splice(state.selected, 1);
       state.console.splice(state.selected, 1);
       state.result.splice(state.selected, 1);
-      state.selected = 0;
+      state.selected = Math.max(0, state.selected - 1);
       setState({ ...state });
     }
+  };
+
+  const submit = (event) => {
+    event.preventDefault();
   };
 
   return (
@@ -30,6 +34,7 @@ function ControlBar({ state, setState }) {
           <button
             className={`fill-div ${styles.submit_button} ${styles.whitetext}`}
             type="submit"
+            onClick={submit}
           >
             <div className={`${styles.static_button} ${styles.run_button}`}>
               Run
