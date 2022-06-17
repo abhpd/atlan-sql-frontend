@@ -7,7 +7,7 @@ import ControlBar from "../controlBar";
 
 function Editor({ state, setState }) {
   return (
-    <div className={`fill-div ${styles.flex}`}>
+    <div className={`fill-div ${styles.flex} ${styles.no_scroll}`}>
       <ControlBar state={state} setState={setState} />
       <CodeMirror
         value={state.query[state.selected]}
@@ -19,7 +19,7 @@ function Editor({ state, setState }) {
           state.query[state.selected] = value;
           setState({ ...state });
         }}
-        className={`fill-div ${styles.CodeMirror} ${styles.p70}`}
+        className={`fill-div ${styles.CodeMirror} ${styles.p70} ${styles.no_scroll}`}
       />
       <Console state={state} />
     </div>

@@ -4,6 +4,9 @@
   width: 100%;
   overflow: scroll;
 }
+.no_scroll::-webkit-scrollbar {
+  display: none;
+}
 .CodeMirror {
   font-family: Arial, monospace;
   font-size: 16px;
