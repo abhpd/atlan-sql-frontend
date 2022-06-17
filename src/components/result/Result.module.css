@@ -12,6 +12,9 @@
   height: 100vh;
   overflow: scroll;
 }
+.p100::-webkit-scrollbar {
+  display: none;
+}
 .link {
   color: blue;
   position: relative;
